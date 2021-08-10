@@ -1,24 +1,9 @@
-#include <curses.h>
+#include "./engine/gameengine.h"
+using namespace std;
+using namespace Engine;
 
 int main(){
-    initialization();
-    endwin();
+    new GameEngine();
     return 0;
 }
 
-void initialization(){
-    initscr();
-
-    // input initializers
-    raw();
-    keypad();
-
-    // we want to initialize our main window here
-    refresh();
-    // enter into our main behaviour
-    mainBehaviour();
-}
-
-void makeLayout(){
-
-}
